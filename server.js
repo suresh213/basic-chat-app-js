@@ -9,12 +9,7 @@ const io = require('socket.io')(server, {
   },
 });
 
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
-
-app.get('/', function (req, res) {
-  res.render('index');
-});
+app.use(express.static(__dirname + '/public'));
 
 const users = {};
 
